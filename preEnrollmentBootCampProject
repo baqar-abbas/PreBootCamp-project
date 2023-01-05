@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY You tube like project</title>    
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+    }
+.header {
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+.topmenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #777;
+    overflow: hidden;
+}
+.topmenu li {
+    float: left;
+}
+.topmenu li a {
+    display: inline-block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.topmenu li a:hover {
+    background-color: #222;
+}
+.topmenu::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.content {
+    width: 70%;
+    
+}
+.sidemenu {
+    width: 30%;
+    background-color: #eee;
+    
+}
+.sidemenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidemenu li a {
+      display: block;
+      text-decoration: none;
+      padding: 16px;
+      color: #666;
+
+}
+.sidemenu li a:hover {
+    background-color: #555;
+    color: white;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.footer {
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+@media (max-width: 700px) {
+    .column {
+        float: none;
+    }
+    .content, .sidemenu {
+width: 100%;
+    }
+   .content .comments {
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .topmenu li {
+        float: none;
+        
+    }
+    .topmenu li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .content .comments {
+        width: 100%;
+    }
+}
+  </style>
+   <script>
+    function myFunction(n) {
+       if(n == 1) {
+        document.getElementById("demo").innerHTML = "Video Title: Barcelona vs Real Madrid 3-2 | Extended Highlights";
+       } else if(n == 2) {
+        document.getElementById("demo").innerHTML = "Video Title: The World's Most Expensive Town";
+       } else if(n == 3) {
+        document.getElementById("demo").innerHTML = "Video Title: 10 Most Expenses Homes of Famous Actors";
+       }
+       else if(n == 4) {
+        document.getElementById("demo").innerHTML = "Video Title: How Trains are replacing Planes in Europe";
+       }
+       else if(n == 5) {
+        document.getElementById("demo").innerHTML = "Video Title: Lionel Messi - The Goat | Official Movie";
+       }    
+       else if(n == 6) {
+        document.getElementById("demo").innerHTML = "Video Title: Argentina - Road to victory Worldcup 2022";
+       }
+       else if(n == 7) {
+        document.getElementById("demo").innerHTML = "Video Title: Funny Animal videos 2022 - Funniest Cats and Dogs";
+       }
+       else if(n == 8) {
+        document.getElementById("demo").innerHTML = "Video Title: All Worldcup Finals since 1998";
+       }
+       else if(n == 9) {
+        document.getElementById("demo").innerHTML = "Video Title: Impossible Moments in Football";
+       }
+       else if(n == 10) {
+        document.getElementById("demo").innerHTML = "Video Title: Best 50 Goalkeeper Saves in 2023";
+       }
+    }
+    
+</script>
+<script src="https://kit.fontawesome.com/d901e0cb9a.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <div class="header">
+<h1>My youTube like Video Project</h1>
+<p>Embedding a video and playlist options</p>
+        </div>
+        <ul class="topmenu">
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Contact</a></li>
+            <li style="float: right;"><a href="#">About</a></li>
+        </ul>    
+        <div class="clearfix">
+<div class="column content">
+    <h3>You Tube Videos</h3>
+    <iframe src="https://www.youtube.com/embed/0NsN2ojr-wA" name="iframe_a" style="height: 500px;width: 95%;" title="Video Iframe"></iframe>
+    <h4 id="demo" style="text-align: center;">Video Title: What are people wearing in Newyork City</h4>
+    <div class="comments">
+        <i class="fa-sharp fa-solid fa-user"></i> Add a Comment: <hr>
+       <br><br> <textarea name="comment" id="comment" style="height:200px;width:95%;" style="resize: none;" placeholder="Enter your Comments here">
+    </textarea>
+    <br><br><button>Add a Comment</button>
+    </div>
+    </div>
+<div class="column sidemenu">
+    <ul>
+        <li><a href="https://www.youtube.com/embed/CyyhTyfjzAA" target="iframe_a" onclick="myFunction(1)"><img src="videoimage1.JPG" alt="BarcelonaVsMadrid"
+             width="120px" height="60px">&nbsp; Barcelona vs Real Madrid 3-2</a></li>
+        <li><a href="https://www.youtube.com/embed/5NUZCDUoDD0" target="iframe_a" onclick="myFunction(2)"><img src="videoimage2.JPG" alt="Most Expensive town" 
+            width="120px" height="60px">&nbsp; Most Expensive Town</a></li>
+        <li><a href="https://www.youtube.com/embed/b9XNCvxXmYw" target="iframe_a" onclick="myFunction(3)"><img src="videoimage3.JPG" alt="Most expensive homes" 
+            width="120px" height="60px"> Most Expensive Homes of Actors</a></li>
+        <li><a href="https://www.youtube.com/embed/BysDjbsJE7E" target="iframe_a" onclick="myFunction(4)"><img src="videoimage4.JPG" alt="Trains Replacing Planes" 
+            width="120px" height="60px"> Trains Replacing Planes</a></li>
+        <li><a href="https://www.youtube.com/embed/_mT_lazCR7A" target="iframe_a" onclick="myFunction(5)"><img src="videoimage5.JPG" alt="Lionel Messi"
+             width="120px" height="60px">&nbsp; Lionel Messi</a></li>
+        <li><a href="https://www.youtube.com/embed/eYRzO3HwC5Q" target="iframe_a" onclick="myFunction(6)"><img src="videoimage6.JPG" alt="Road to victory" width="120px" 
+            height="60px">&nbsp; Road to victory 2022</a></li>
+        <li><a href="https://www.youtube.com/embed/kw_Ao44Kuro" target="iframe_a" onclick="myFunction(7)"><img src="videoimage11.JPG" alt="Funny Animal Videos" 
+            width="120px" height="60px"> Funny Animal Videos 2022</a></li>
+        <li><a href="https://www.youtube.com/embed/2Gg4OQo7-zA" target="iframe_a" onclick="myFunction(8)"><img src="videoimage12.JPG" alt="All World Cup Finals" 
+            width="120px" height="60px"> World Cup Finals since 1998</a></li>
+        <li><a href="https://www.youtube.com/embed/1oGyg0_XmyQ" target="iframe_a" onclick="myFunction(9)"><img src="videoimage13.JPG" alt="Impossible Moments"
+             width="120px" height="60px"> Impossible Football Moments</a></li>
+        <li><a href="https://www.youtube.com/embed/w21Ou6dJEvY" target="iframe_a" onclick="myFunction(10)"><img src="videoimage10.JPG" alt="Best Goal keeper Saves" 
+            width="120px" height="60px"> Best goalKeeper Saves 2022</a></li>
+    </ul>
+</div>
+        </div>
+        <div class="footer">
+            <h1>My You Tube player Footer</h1>
+            <p>Footer text goes here ... Baqar Abbas (My Project) </p>
+        </div>
+       
+    </body>
+</html>
